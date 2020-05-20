@@ -1,19 +1,39 @@
 # བློ་སྦྱོང་ཚིག་བརྒྱད་མའི་མཉེན་ཆས།
-  
-## Downloads and Edit Online
 
-- **Publication View** [![](https://img.icons8.com/color/18/000000/edit.png) ![](https://img.icons8.com/color/18/000000/layers.png)](http://prose.io/#OpenPecha/P000780/) `base + 1-toc + 2-pagination_bo + 3-correction`
-    - [![](https://img.icons8.com/color/24/000000/txt.png) Plain text (.txt)](https://github.com/OpenPecha/P000780/releases/download/v02/blo_sbyong_tshig_rkang_brgyad_ma-v001.txt)
-    - [![](https://img.icons8.com/color/24/000000/markdown.png) Markdown (.md)](link)
-    - [![](https://img.icons8.com/color/24/000000/epub.png) Epub (.epub)](link)
-    - [![](https://img.icons8.com/color/24/000000/microsoft-word-2019.png) Word (.docx)](link)
+## Publication View
+
+📄 `base` 🏷 `(t)oc + (p)agination_bo + (c)orrection`
 
 
-- **Diplomatic View** [![](https://img.icons8.com/color/18/000000/edit.png) ![](https://img.icons8.com/color/18/000000/layers.png)](http://prose.io/#OpenPecha/P000780/tree/diplomatic) `base + 2-pagination_bo + 4-uncertain`
-    - [![](https://img.icons8.com/color/24/000000/markdown.png) Markdown (.md)](link)
+### Edit online <img src="https://img.icons8.com/color/20/000000/edit-property.png">
+<details><summary> Open editor </summary><blockquote>
+<iframe src="https://prose.io/#OpenPecha/P000780/edit/publication/v001.txt" width="100%" height="600"></iframe>
+</blockquote></details>
+
+_Note: to export custom files, write the format and annotations you need in the commit message. For example `export epub t+c` or `epub toc+correction`. To edit large files use [FireFox ![](https://img.icons8.com/color/16/000000/firefox.png)](https://www.mozilla.org/)_
+
+### Downloads <img src="https://img.icons8.com/cotton/20/000000/download-from-cloud.png">
+- [![](https://img.icons8.com/color/20/000000/txt.png) Plain text (.txt)](https://github.com/OpenPecha/P000780/releases/download/v02/blo_sbyong_tshig_rkang_brgyad_ma-v001.txt) `v123`
+- [![](https://img.icons8.com/color/20/000000/markdown.png) Markdown (.md)](link) `v123`
+- [![](https://img.icons8.com/color/20/000000/epub.png) Epub (.epub)](link) `v123`
+- [![](https://img.icons8.com/color/20/000000/microsoft-word-2019.png) Word (.docx)](link) `v123`
 
 
-_Note: for large files use [FireFox ![](https://img.icons8.com/color/16/000000/firefox.png)](https://www.mozilla.org/)_
+## Diplomatic View
+
+📄 `base`  🏷 `2-pagination_bo + 4-uncertain`
+
+
+### Edit online <img src="https://img.icons8.com/color/20/000000/edit-property.png">
+<details><summary> Open editor </summary><blockquote>
+<iframe src="http://prose.io/#OpenPecha/P000780/edit/diplomatic/v001.txt" width="100%" height="600"></iframe>
+</blockquote></details>
+
+_Note: to export custom files, write the format and annotations you need in the commit message. For example `export epub t+c` or `epub toc+correction`. To edit large files use [FireFox ![](https://img.icons8.com/color/16/000000/firefox.png)](https://www.mozilla.org/)_
+
+### Downloads <img src="https://img.icons8.com/cotton/20/000000/download-from-cloud.png">
+ - [![](https://img.icons8.com/color/24/000000/markdown.png) Markdown (.md)](link)
+
 
 ## Edit Offline
 
@@ -22,17 +42,18 @@ _Note: for large files use [FireFox ![](https://img.icons8.com/color/16/000000/f
 - Create a view by typing: `<cmd command>`
 - Save and upload by typing: `<cmd command>`
 
-_[Tutorial ![](https://img.icons8.com/color/16/000000/classroom.png)](link)_
+_Detailed [tutorial ![](https://img.icons8.com/color/16/000000/classroom.png)](link)_
 
 
-## .opf
-- Link: 
-- Layers:
-  - index
-  - pagination
-  - correction
-  - peydurma-note
-  - uncertain
+## All available layers
+- index: <description>
+- pagination: <description>
+- correction: <description>
+- peydurma-note: <description>
+- uncertain: <description>
+
+## Parent Work
+
 
 ## Source 
 - [![](https://img.icons8.com/color/24/000000/download.png) File](https://github.com/OpenPecha/P000780/releases/download/v01/blo_sbyong_tshig_rkang_brgyad_ma.html) 
