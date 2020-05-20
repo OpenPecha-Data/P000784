@@ -1,0 +1,66 @@
+name: Update annotations
+
+on:
+  push:
+    branches: [ publication ]
+
+jobs:
+  # format HFML files and upload the opf artifac
+  format:
+    if: ( github.event.commits[0].message == 'merge' ) && ( github.actor == '10zinten' )
+    runs-on: ubuntu-latest
+    steps:
+#       - name: Setup tmate session
+#         uses: mxschmitt/action-tmate@v2
+      - uses: actions/checkout@v2
+        with:
+          ref: publication
+      - name: Format HFML
+        run: |
+          loc=$(pwd)
+          repo_name=${loc##*/}
+          echo ${{ secrets.MAINTAINER }}
+          # TODO: to be replaced by real formatter
+          msg='Third update from publication'
+          mkdir -p $repo_name.opf/layers/v001/
+          mkdir -p $repo_name.opf/base
+          touch $repo_name.opf/layers/v001/pagination.yml
+          echo $msg >> $repo_name.opf/layers/v001/pagination.yml
+          echo $msg >> $repo_name.opf/base/v001.txt
+          echo $msg >> $repo_name.opf/index.yml
+          
+          mkdir formatted && mv $repo_name.opf formatted/
+      - uses: actions/upload-artifact@v2
+        with:
+          name: opf
+          path: formatted/
+        
+  update:
+    needs: format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - uses: actions/download-artifact@master
+        with: 
+          name: opf
+          path: formatted
+      - name: update base and layer
+        run: |
+          loc=$(pwd)
+          repo_name=${loc##*/}
+          mv $repo_name.opf/meta.yml ./
+          rm -rf $repo_name.opf
+          mv formatted/* ./
+          mv meta.yml $repo_name.opf/
+          rm -rf formatted
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update pecha" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
